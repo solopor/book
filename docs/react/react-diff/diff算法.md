@@ -52,11 +52,12 @@ setListData([{'key':'0', value: '0'}].concat(listData))
     </div>
 ```
 
-点击add按钮后会向头部插入一个{'key':'0', value: '0'}的数据， 此时控制台打印如下:
+点击add按钮后会向头部插入一个`{'key':'0', value: '0'}`的数据， 此时控制台打印如下:
 
 ![avatar](./no_key_diff_result.png)
 
-可以看见插入后`item-container`下面的dom节点都发生了变化，有两个节点改变了文本内容，并且插入了一个新节点, 变化情况如下图:
+可以看见插入后`item-container`下面的dom节点都发生了变化，有两个节点改变了文本内容，并且插入了一个新节点, 变化情况如下图:  
+
 | dom |  插入前  | 插入后 |
 | -   | - | -|
 | domA | {'key':'1', value: '1'} | {'key':'0', value: '0'} |
@@ -122,7 +123,7 @@ listData.map(item => {
 
 ![avatar](./key_diff_move_head.png)
 
-将头部项移动到尾部后，key1对应的dom对象对移动到`item-container`的尾部，所以伴随着一次removedNodes和一次addedNodes。
+将头部项移动到尾部后，key1对应的dom对象对移动到`item-container`的尾部，所以伴随着一次`removedNodes`和一次`addedNodes`。
 
 ### 情景六 将尾部数据移动到头部
 移动前: `[{'key':'1', value: '1'}, {'key':'2', value: '2'}, {'key':'3', value: '3'}, {'key':'4', value: '4'}, {'key':'5', value: '5'}]`
